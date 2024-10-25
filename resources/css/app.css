@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-gray-50 p-0;
+}
+
+.link {
+    @apply m-3 font-normal;
+}
+
+.link:hover {
+    @apply text-purple-900 font-medium;
+}
+
+.link.active {
+    @apply text-purple-900 font-medium;
+}
+
+.title-page {
+    @apply text-gray-800 font-bold text-2xl mb-8
+}
+
+label {
+    @apply block mt-3;
+}
+
+input {
+    @apply w-full p-2 mt-1;
+}
