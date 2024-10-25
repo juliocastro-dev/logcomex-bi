@@ -15,16 +15,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Criando uma instancia do Faker
+        User::create([
+            'name' => 'Teste 1',
+            'email' => 'teste1@email.com',
+            'password' => '12345678',
+        ]);
+
         $faker = Faker::create();
 
-        // Loop para inserir pelo menos 2.000 registros
         foreach (range(1, 2000) as $index) {
             Dataset::create([
-                'code' => strtoupper($faker->lexify('??????')), // Gera uma string aleatoria com 6 letras
-                'name' => $faker->name, // Gera um nome aleatorio
-                'description' => $faker->paragraph, // Gera uma descricao de paragrafo
-                'amount' => $faker->numberBetween(1, 1000) // Gera um numero inteiro entre 1 e 1000
+                'code' => strtoupper($faker->lexify('??????')),
+                'name' => $faker->name,
+                'description' => $faker->paragraph,
+                'amount' => $faker->numberBetween(1, 1000)
             ]);
         }
     }
