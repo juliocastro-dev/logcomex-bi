@@ -11,6 +11,14 @@ Foi desenvolvido um sitema de BI utilizando as tecnologias solicitadas no teste:
 
 É válido ressaltar que foi utilizado o Laravel Sail para trabalharmos com dockerização do ambiente.
 
+### 1º Passo - montar os containers
+
+Para montar os conteires dê o seguinte comando:
+
+~~~bash
+./vendor/bin/sail up -d
+~~~
+
 ### Passo a passo caso o .env não tenha sido criada
 
 Verifique se o arquivo `.env` foi criado caso não tenha sido crie-o, na raiz do projeto, com base no arquivo `.env.example` e modifique o seguinte trecho de código
@@ -33,18 +41,10 @@ DB_USERNAME=sail
 DB_PASSWORD=password
 ~~~
 
-Verifique também se foi criado a key para a variável `APP_KEY=` caso não tenha sido gerada execute o seguinte comando
+Verifique também se foi criado a key para a variável `APP_KEY=` no `.env` caso não tenha sido gerada execute o seguinte comando
 
 ~~~bash
 ./vendor/bin/sail php artisan key:generate
-~~~
-
-### 1º Passo - montar os containers
-
-Para montar os conteires dê o seguinte comando:
-
-~~~bash
-./vendor/bin/sail up -d
 ~~~
 
 ### 2º Passo
